@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbar</title>
+    <style>
+      nav {
+        position: fixed;
+        width: 100%;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        transition: all 0.3s ease;
+      }
+      .logo-icon {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+      }
+      .logo-icon p {
+        color: #e100ff;
+        font-size: 25px;
+        margin-left: 10px;
+        font-weight: 600;
+        letter-spacing: 1px;
+      }
+      .profile {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        margin-right: 50px;
+        gap: 20px;
+      }
+      .profile img {
+        width: 40px;
+        height: 40px;
+        object-fit: cover;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: white;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 100, 0.1);
+        z-index: 1;
+        border-radius: 10px;
+        top: 90px;
+        right: 20px;
+        padding: 10px;
+        color: black;
+      }
+
+      .dropdown-content a {
+        color: var(--text-color);
+        padding: 5px 16px;
+        text-decoration: none;
+        display: block;
+      }
+      .dropdown-content a:hover {
+        color: #e100ff;
+        transition: all 0.3s ease;
+      }
+
+      .show {
+        display: block;
+      }
+      header.stiky {
+        background: black;
+        box-shadow: 0 0.5rem 2rem rgba(79, 0, 85, 0.591);
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="logo-icon">
+        <p>Catat Cepat</p>
+      </div>
+      <div class="profile">
+        <p>Hai, Rahmad Fahrurrozi</p>
+        <img
+          onclick="myFunction()"
+          class="dropbtn"
+          src="assets/avatar-profile.png"
+          alt="profile-nav"
+        />
+        <div id="myDropdown" class="dropdown-content">
+          <a href="#">Profile</a>
+          <a href="#">Account</a>
+          <a href="#">Project</a>
+        </div>
+      </div>
+    </nav>
+
+    <script>
+      const header = document.querySelector("header");
+
+      window.addEventListener("scroll", function () {
+        header.classList.toggle("stiky", window.scrollY > 0);
+      });
+      function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+      }
+
+      window.onclick = function (event) {
+        if (!event.target.matches(".dropbtn")) {
+          let dropdowns = document.getElementsByClassName("dropdown-content");
+          let i;
+          for (i = 0; i < dropdowns.length; i++) {
+            let openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains("show")) {
+              openDropdown.classList.remove("show");
+            }
+          }
+        }
+      };
+    </script>
+  </body>
+</html>
