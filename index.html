@@ -14,29 +14,25 @@
   </head>
   <body>
     <navbar-component></navbar-component>
-    <section class="container-section1">
-      <div class="app">
-        <header>
-          <h1>Notes App</h1>
-        </header>
-        <main>
-          <form id="note-form">
-            <input type="text" id="title" placeholder="Title" required />
-            <textarea
-              id="body"
-              placeholder="Write your note here..."
-              required
-            ></textarea>
-            <button type="submit">Add Note</button>
-          </form>
-          <section id="notes-container">
-            <note-element></note-element>
-          </section>
-        </main>
-      </div>
-    </section>
-
+    <main>
+      <section class="first-section">
+        <div>
+          <h1 class="tittle">
+            Tulis dan simpan semua <span>catatanmu</span> disini
+          </h1>
+          <p class="subtittle">Catatlah sesuatu yang kamu inginkan</p>
+          <div class="hero-buttons">
+            <button-left text="Mulai Mencatat Sekarang"></button-left>
+            <button-right text="Click disini"></button-right>
+          </div>
+        </div>
+        <div class="hero-images">
+          <img src="assets/note-image.png" alt="note-image" />
+        </div>
+      </section>
+    </main>
     <script src="app.js"></script>
     <script src="/components/navbar.js"></script>
+    <script src="/components/buttons.js"></script>
   </body>
 </html>
