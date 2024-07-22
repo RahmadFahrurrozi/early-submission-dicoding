@@ -128,7 +128,7 @@ class NavbarComponent extends HTMLElement {
                     <div id="myDropdown" class="dropdown-content">
                         <a href="#">Profile</a>
                         <a href="#">Account</a>
-                        <a href="#">Project</a>
+                        <a href="#">History</a>
                     </div>
                 </div>
             </nav>

@@ -11,7 +11,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  height: 100vh;
+  height: 100%;
   background: rgb(0, 0, 0);
   background: -moz-linear-gradient(
     180deg,
@@ -39,7 +39,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   flex-direction: column;
   text-align: center;
 }
@@ -61,7 +60,7 @@ body {
 
 .first-section .subtittle {
   font-size: 1rem;
-  color: #fff;
+  color: #b2b2b2;
   text-transform: capitalize;
   line-height: 1.2;
   margin: 0 0 20px 0;
@@ -83,6 +82,25 @@ body {
 .hero-images img {
   width: 500px;
   height: 500px;
+}
+
+.notes-hashtag {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding-bottom: 30px;
+}
+
+.notes-hashtag img {
+  width: 70px;
+  height: 70px;
+}
+
+.notes-section button-right {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 20px;
 }
 
 /* Responsiveness */
@@ -111,6 +129,9 @@ body {
 
   .first-section .subtittle {
     font-size: 0.8rem;
+  }
+  .notes-hashtag {
+    padding: 10px 0;
   }
 
   .hero-images img {

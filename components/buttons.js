@@ -27,9 +27,14 @@ class ButtonLeft extends HTMLElement {
           padding: 10px 20px;
           border-radius: 100px;
           border: none;
-          cursor: pointer;
           text-align: center;
           display: inline-block;
+          cursor: pointer;
+          fonront-weight: 700;
+          transition: all 0.5s ease;
+        }
+        .button:hover {
+          transform: scale(1.05);
         }
       </style>
       <button class="button">${this.getAttribute("text")}</button>
@@ -71,7 +76,8 @@ class ButtonRight extends HTMLElement {
           cursor: pointer;
           text-align: center;
           display: inline-block;
-          transition: all 0.5s ease;
+          transition: all 0.5s ease; 
+          font-weight: 700;
         }
         .button:hover {
           color: #fff;

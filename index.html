@@ -23,16 +23,31 @@
           <p class="subtittle">Catatlah sesuatu yang kamu inginkan</p>
           <div class="hero-buttons">
             <button-left text="Mulai Mencatat Sekarang"></button-left>
-            <button-right text="Click disini"></button-right>
+            <button-right
+              id="scroll-to-note-form"
+              href="#note-form"
+              text="Click disini"
+            ></button-right>
           </div>
         </div>
         <div class="hero-images">
           <img src="assets/note-image.png" alt="note-image" />
         </div>
       </section>
+      <section id="note-form" class="notes-section">
+        <div class="notes-hashtag">
+          <button-right text="#jadiLebihProduktif"></button-right>
+          <img src="/assets/plan-3d.png" alt="produktif-icon" />
+        </div>
+        <note-form></note-form>
+        <div class="note-list">
+          <!-- Daftar catatan akan muncul di sini -->
+        </div>
+      </section>
     </main>
     <script src="app.js"></script>
     <script src="/components/navbar.js"></script>
     <script src="/components/buttons.js"></script>
+    <script src="/components/noteform.js"></script>
   </body>
 </html>
