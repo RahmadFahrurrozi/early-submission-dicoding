@@ -17,10 +17,10 @@
     <main>
       <section class="first-section">
         <div>
-          <h1 class="tittle">
+          <h1 class="title">
             Tulis dan simpan semua <span>catatanmu</span> disini
           </h1>
-          <p class="subtittle">Catatlah sesuatu yang kamu inginkan</p>
+          <p class="subtitle">Catatlah sesuatu yang kamu inginkan</p>
           <div class="hero-buttons">
             <button-left text="Mulai Mencatat Sekarang"></button-left>
             <button-right
@@ -39,15 +39,22 @@
           <button-right text="#jadiLebihProduktif"></button-right>
           <img src="/assets/plan-3d.png" alt="produktif-icon" />
         </div>
-        <note-form></note-form>
-        <div class="note-list">
-          <!-- Daftar catatan akan muncul di sini -->
+        <div class="form-container">
+          <note-form></note-form>
+          <calendar-element></calendar-element>
         </div>
       </section>
+      <section class="notes-section">
+        <h2 class="notes-title">Daftar Catatan</h2>
+        <note-list></note-list>
+      </section>
     </main>
+    <script src="/components/list-item-note.js"></script>
     <script src="app.js"></script>
     <script src="/components/navbar.js"></script>
     <script src="/components/buttons.js"></script>
+    <script src="/components/calendar.js"></script>
     <script src="/components/noteform.js"></script>
+    <script type="module" src="/components/notelist.js"></script>
   </body>
 </html>
